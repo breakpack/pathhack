@@ -1,0 +1,107 @@
+<?php 
+$sun_height = 25;
+$mon_height = 20;
+$tus_height = 35;
+$wen_height = 25;
+$thr_height = 5;
+$fri_height = 10;
+$sat_height = 10;
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css" />
+  <title>Graph</title>
+</head>
+
+<body>
+  <div class="background">
+    <input id="sidebar" type="checkbox" />
+    <div class="sidebar">
+      <div class="wrapper">
+        <div class="wave"></div>
+      </div>
+      <div class="index">
+        <h2>Index</h2>
+        <a href="index.html">-Main</a><br><br><br><br><br><br>
+        <a href="graph.html">-Graph</a><br><br><br><br><br><br>
+      </div>
+    </div>
+    <div class="contents">
+      <label for="sidebar" id="sidebarbtn">
+        <div id="sidebar_btn"></div>
+      </label>
+      <h2 id="title"></h2>
+      <style>
+        .sun {
+          height: <?php echo $sun_height;?>vh;
+        }
+
+        .mon {
+          height: <?php echo $mon_height;?>vh;
+        }
+
+        .tus {
+          height: <?php echo $tus_height;?>vh;
+        }
+
+        .wen {
+          height: <?php echo $wen_height;?>vh;
+        }
+
+        .thr {
+          height: <?php echo $thr_height;?>vh;
+        }
+
+        .fri {
+          height: <?php echo $fri_height;?>vh;
+        }
+
+        .sat {
+          height: <?php echo $sat_height;?>vh;
+        }
+      </style>
+      <center>
+        <table class="graph1">
+          <tr class="graph_tr">
+            <td>
+              <hr class="hr sun">
+            </td>
+            <td>
+              <hr class="hr mon">
+            </td>
+            <td>
+              <hr class="hr tus">
+            </td>
+            <td>
+              <hr class="hr wen">
+            </td>
+            <td>
+              <hr class="hr thr">
+            </td>
+            <td>
+              <hr class="hr fri">
+            </td>
+            <td>
+              <hr class="hr sat">
+            </td>
+          </tr>
+          <tr>
+            <td id="font"><center>sun</center></td>
+            <td id="font"><center>mon</center></td>
+            <td id="font"><center>tus</center></td>
+            <td id="font"><center>wen</center></td>
+            <td id="font"><center>thr</center></td>
+            <td id="font"><center>fri</center></td>
+            <td id="font"><center>sat</center></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</body>
+
+</html>

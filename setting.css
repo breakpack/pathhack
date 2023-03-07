@@ -1,0 +1,435 @@
+@keyframes size_up {
+    0%   {width:0px; height:0px;}
+    100%  {width:100vw; height:100vh;}
+}
+@keyframes wave {
+    from { transform: rotate(0deg);}
+    from { transform: rotate(-360deg);}
+}
+@keyframes sidebar{
+    0%{left:-70%}
+    100%{left:0;}
+}
+@keyframes sidebar_in{
+    0%{left:0;}
+    100%{left:-70%;}
+}
+@keyframes hover_ani{
+    0%{text-decoration: none;font-size: 30px;line-height: 30px;}
+    100%{text-decoration: underline;font-size: 40px;line-height: 40px;}
+}
+@keyframes contents_big {
+    0%{width:30%; left:100%;}
+    100%{width:100%; left:0%;}
+}
+@keyframes contents_small {
+    0%{width:100%; left:0%;}
+    100%{width:30%; left:100%;}
+}
+@keyframes title_ani {
+    0%{top:-30%;}
+    100%{top:-1%;visibility:inherit;}
+}
+@keyframes img1_ani {
+    0%{width:0;}
+    100%{width:30%;}
+}
+@keyframes img2_ani {
+    0%{width:0;height: 0;}
+    100%{width:30%;height: 40%;}
+}
+@keyframes img3_ani {
+    0%{width:0;height: 0;}
+    100%{width:30%;height: 30%;}
+}
+@keyframes background_color {
+    0%{background-color: black;}
+    100%{background-color: white;}
+}
+@keyframes fade_in {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'SDMiSaeng';
+    background-color: black;
+    margin:0;
+    animation-delay: 1.5s;
+    animation-name: background_color;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+.background{
+    z-index: 1;
+    position: absolute;
+    animation-name: size_up;
+    animation-duration: 2s;
+    background-color: white;
+    height: 100vh;
+    width:100vw;
+}
+h3{
+    z-index: 11;
+    width:10%;
+    position: absolute;;
+    font-size: 20px;
+    color:black;
+}
+#login{
+    right:6em;
+    font-size: 23px;
+}
+#register{
+    right:3em;
+    font-size: 23px
+}
+h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    top:0px;
+    position: absolute;
+    overflow: hidden;
+}
+.wave {
+    z-index: 1;
+    top:0;
+    right:10%;
+    width: 500%;
+    height:100%;
+    margin:0;
+    position: absolute;
+    background:black;
+    overflow:hidden;
+}
+#sidebar {
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+    position:absolute; 
+}
+#sidebarbtn{
+    z-index: 100;
+    position:relative;
+    top:1%;
+    font-size: 50px;
+}
+#sidebarbtn:hover{
+    cursor: pointer; 
+}
+.sidebar{
+    float:left;
+    position: fixed;
+    overflow: hidden;
+    width:70%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+#sidebar:checked ~ .sidebar {
+    animation-name: sidebar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.sidebar {
+    animation-name: sidebar_in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.index{
+    z-index: 2;
+    position: absolute;
+    top:27%;
+    left:5%;
+}
+.index h2{
+    color:white;
+    font-size:200px;
+    margin-bottom:0;
+}
+.index a{
+    text-decoration: none;
+    color:white;
+    margin-top:5%;
+    font-size:130px;
+    line-height: 30px;
+}
+.index a:hover{
+  text-decoration: underline white;
+}
+#sidebar:checked ~ .sidebar {
+    animation-name: sidebar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.contents{
+    position: relative;
+    left: 10%;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+}
+.contents{
+    animation-name: contents_big;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#sidebar:checked ~ .contents {
+    animation-name: contents_small;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.contents #title{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:30% 0 0 43%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 200px;;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contents #title2{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:50% 0 0 45%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 150px;;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#sidebar_btn{
+    z-index: 100;
+    position:relative;
+    margin-top:5% ;
+    left:10%;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: black;
+}
+.graph1{
+  position: absolute;
+  left:20%;
+  top:20%;
+  width:56%;
+}
+.graph1 td{
+  vertical-align: bottom;
+  width:8%;
+}
+.hr{
+  bottom:0;
+  width: 70%;
+  background-color: black;
+  border:none;
+}
+#font{
+  margin-top:-5%;
+  font-size:20px;
+}
+.img_div1{
+  position:absolute;
+  width: 100%;
+  margin-top:70%;
+  margin-left:25%;
+}
+#img_1{
+  width:50%;
+  position:absolute;
+  left:-5vh;
+}
+#img_2{
+  width:50%;
+  position:absolute;
+  left:20vh;
+}
+#img_3{
+  width:40%;
+  position:absolute;
+  left:10vh;
+  top:5vh;
+}
+#img_4{
+  width:40%;
+  position:absolute;
+  left:0vh;
+  top:15vh;
+}
+#img_5{
+  width:40%;
+  position:absolute;
+  left:20vh;
+  top:15vh;
+}
+.img_gray{
+  animation-name:fade_in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.contents #title3{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:180% 0 0 48%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 150px;;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contents #title4{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:200% 0 0 55%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 150px;;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contents #title6{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:30% 0 0 55%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 150px;;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.form1{
+  position:absolute;
+  width:100%;
+  top:30vh;
+}
+.form1 input{
+  text-align: center;
+  font-size: 70px;
+  font-family: 'SDMiSaeng';
+  width: 60vw;
+  height: 7vh;
+  background-color: tomato;
+  border: solid 3px black;
+  border-radius: 5px;
+}
+.form1 #submit{
+  font-size: 70px;
+  font-family: 'SDMiSaeng';
+  position:absolute;
+  top:80vh;
+  left:35vw;
+  width: 60vw;
+  height: 7vh;
+  background-color: gold;
+  border: solid 3px black;
+  border-radius: 5px;
+}
+#todo{
+  position:absolute;
+  top:-5vh;
+  left:35vw;
+}
+#time{
+  position:absolute;
+  top:60vh;
+  left:35vw;
+}
+#number{
+  position:absolute;
+  top:70vh;
+  left:35vw;
+}
+#deco{
+  position:absolute;
+  top:80vh;
+  left:35vw;
+}
+.contents #title7{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:-18% 0 0 53%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 80px;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contents #title8{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:115% 0 0 60%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 80px;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contents #title9{
+    visibility: hidden;
+    position: absolute;
+    color:black;
+    border:0;
+    margin:140% 0 0 52%;
+    padding: 0;
+    width:80%;
+    height: 10px;
+    border-radius: 5px;
+    font-size: 60px;
+    animation-delay: 1s;
+    animation-name: title_ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
